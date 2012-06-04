@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>QUnit Test</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media		   ="screen" />
+	<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+	<script type="text/javascript" src="vm2-urlAmigavel.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			module("monta URL");
+			test("monta uma url simples", function(){
+				var url = $(document).urlAmigavel("uma simples url");
+				equal("uma-simples-url", url);
+			});
+
+			test("url com multiplo espaco", function(){
+				var url = $(document).urlAmigavel("uma  url  com  multiplos  espacos");
+				equal("uma-url-com-multiplos-espacos", url);
+			});
+
+		});
+	</script>
+</head>
+<body>
+	 <h1 id="qunit-header">QUnit example</h1>
+	 <h2 id="qunit-banner"></h2>
+	 <div id="qunit-testrunner-toolbar"></div>
+	 <h2 id="qunit-userAgent"></h2>
+	 <ol id="qunit-tests"></ol>
+	 <div id="qunit-fixture">test markup, will be hidden</div>
+</body>
+</html>
