@@ -10,6 +10,6 @@ $.fn.urlAmigavel = function(valor){
 			url_amigavel += valor.substr(i, 1);
 		}
 	}
-	url_amigavel = url_amigavel.replace(/ /g, '-');
+	url_amigavel = url_amigavel.replace(/ +/g, '-');
 	return url_amigavel;
 }
